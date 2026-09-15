@@ -1,24 +1,19 @@
 #include <iostream>
 
-float calculate(float x);
-float calculate(float y);
-float calculate(float z);
-float calculate(float t);
+float calculateVolume(float length_);
 
 int main()
-{
-    float x = 10;
-    float y = x*x;
-    float z = x/4;
-    float t = y/z;
 
-    std::cout<< "The function will output "<< t << " when x is equal to "<< x<< std::endl;
+{
+    float length_ = 3.5; //Stating what the lenght of the cube is//
+
+    std::cout <<"The Volume of the cube" <<" is "<< calculateVolume(length_)<< std::endl; //What will display with the volume value//
 
     return 0;
+
 }
 
-float calculate(float t)
+float calculateVolume(float length_)
 {
-    return t;
+    return length_* length_* length_; //Multiplying the variable that was set earlier
 }
-
