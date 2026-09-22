@@ -1,0 +1,25 @@
+#inlcude <iostream>
+
+int Main();
+{
+    int calculate(t, w, x, y, z, a, b, c, d, m, s)  //declaring what variables are gonna be calculated//
+
+    int w = 3
+    int x = 4
+    int y = 1
+    int z = 7  //stating what each variable is equal to//
+
+    int t = x + y + z + a  //adding all of the variables up for the sum//
+
+    std::cout << t << std::endl;
+
+    return 0;
+
+    int m = t/4 //finding the mean//
+
+    int a = (w - t)*(w - t)
+    int b = (x - t)*(x - t)
+    int c = (y - t)*(y - t)
+    int d = (z - t)*(z - t)  //
+
+}
