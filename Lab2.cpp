@@ -10,7 +10,7 @@ int main()
 
     float pi_v = 3.1415; //putting an aproximation to pi//
 
-    std::cout <<"The Volume of the cube" <<" is "<< calculateVolume(length_)<< std::endl; //What will display with the volume value//
+    std::cout <<"The Volume of the cube" <<" is "<< length_ * length_ * pi_v<< std::endl; //What will display with the volume value//
 
     return 0;
 
