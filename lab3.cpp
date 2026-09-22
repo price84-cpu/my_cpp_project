@@ -1,6 +1,6 @@
-#include <iostream>
+#include <iostream> //includes input output stream to terminal
 
-int calculate(int w, int x, int y, int z);  //declaring what variables are gonna be calculated//
+float calculatesum(float w, float x, float y, float z);  //declaring what variables are gonna be calculated//
 
 int Main()
 {
@@ -10,12 +10,11 @@ int Main()
     int y = 1;
     int z = 7;  //stating what each variable is equal to//
 
-
     float calculate(float t, float m, float a, float b, float c, float d);
 
-    float t = w + x + y + z;  //adding all of the variables up for the sum//
+    float t = calculatesum(w, x, y, z);  //adding all of the variables up for the sum//
 
-    std::cout << calculate(t) << std::endl;
+    std::cout << t << std::endl;
 
     return 0; 
 /*
