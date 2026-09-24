@@ -1,28 +1,41 @@
-#include <iostream> //includes input output stream to terminal
+#include <iostream> //includes input output stream to terminal//
 
-float calculatesum(float w, float x, float y, float z);  //declaring what variables are gonna be calculated//
-
-int Main()
+int main()
 {
+
+    float vari_1 = 3;
+    float vari_2 = 4;
+    float vari_3 = 1;
+    float vari_4 = 4;  
+
+    float total_ = vari_1 + vari_2 + vari_3 + vari_4;
+
+    std::cout <<"The sum of the variables is " << total_ << std::endl;
+
+
+    float mean_ = total_/4; //finding the mean//
+
+    std::cout <<"The mean of the variables is "<< mean_ << std::endl;
+
+
+    float a = (vari_1 - mean_)*(vari_1 - mean_);
+    float b = (vari_2 - mean_)*(vari_2 - mean_);
+    float c = (vari_3 - mean_)*(vari_3 - mean_);
+    float d = (vari_4 - mean_)*(vari_4 - mean_);  //subtracting mean from original variables, and squaring them
+
+    std::cout << "The numbers after subtracting the mean and squaring them are " << a <<" "<< b <<" "<< c <<" "<< d << std::endl;
     
-    int w = 3;
-    int x = 4;
-    int y = 1;
-    int z = 7;  //stating what each variable is equal to//
 
-    float calculate(float t, float m, float a, float b, float c, float d);
+    float sqrd_vals = a + b + c + d;
 
-    float t = calculatesum(w, x, y, z);  //adding all of the variables up for the sum//
+    std::cout << "The sum of the squared numbers is " << sqrd_vals << std::endl;
 
-    std::cout << t << std::endl;
 
-    return 0; 
-/*
-    float m = t/4; //finding the mean//
+    float variance = sqrd_vals/4;
 
-    float a = (w - t)*(w - t);
-    float b = (x - t)*(x - t);
-    float c = (y - t)*(y - t);
-    float d = (z - t)*(z - t);  //subtracting mean from original variables, and squaring them
-    */
+    std::cout << "The squared values divided by N is " << variance << std::endl;
+    
+
+    return 0;
+    
 }
