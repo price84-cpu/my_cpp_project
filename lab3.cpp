@@ -57,7 +57,8 @@ int main()
     outHam.open ("C:/Users/jaxon/Documents/School/Computer_Science/Lab3/outMeanStd.dat");
 
     outHam <<"The mean of the variables, " << vari_1 <<" "<< vari_2 <<" "<< vari_3 <<" "<< vari_4 <<
-    " is " << mean_ <<" and the standard devaition is "<< final << std::endl;
+    " is " << mean_ <<" and the standard devaition is "<< final << std::endl; 
+    //Outputs the text to a file rather than the terminal//
 
 
     return 0;
