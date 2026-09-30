@@ -5,7 +5,7 @@
 int main()
 {
     std::ifstream infile;
-    infile.open("C:/Users/jaxon/Documents/School/Computer_Science/Lab3/LabThreeVariables.txt");
+    infile.open("C:/Users/jaxon/Documents/School/Computer_Science/Lab3/inMeanStd.dat.txt");
 
     int vari_1;
     int vari_2;
@@ -51,6 +51,14 @@ int main()
                                           to find the sqaure root of the variance */
 
     std::cout << "The final is "<< final << std::endl;
+
+
+    std::ofstream outHam;
+    outHam.open ("C:/Users/jaxon/Documents/School/Computer_Science/Lab3/outMeanStd.dat");
+
+    outHam <<"The mean of the variables, " << vari_1 <<" "<< vari_2 <<" "<< vari_3 <<" "<< vari_4 <<
+    " is " << mean_ <<" and the standard devaition is "<< final << std::endl;
+
 
     return 0;
 }
