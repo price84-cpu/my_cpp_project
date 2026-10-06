@@ -5,20 +5,21 @@
 int main()
 {
     std::ifstream infile;
-    infile.open("C:/Users/jaxon/Documents/School/Computer_Science/Lab3/inMeanStd.dat.txt");
+    infile.open("C:/Users/jaxon/Documents/School/Computer_Science/Lab3/inMeanStd.dat.txt"); 
+    //acessess the file//
 
     int vari_1;
     int vari_2;
     int vari_3;
-    int vari_4;
+    int vari_4; //declaring what data type each variable is
 
     infile >> vari_1;
     infile >> vari_2;
     infile >> vari_3;
-    infile >> vari_4;
+    infile >> vari_4; //takes each number from each line from the file, and assigns them to the given variable
 
 
-    float total_ = vari_1 + vari_2 + vari_3 + vari_4;
+    float total_ = vari_1 + vari_2 + vari_3 + vari_4; //finds the sum//
 
     std::cout <<"The sum of the variables is " << total_ << std::endl;
 
