@@ -7,8 +7,10 @@ int main()
     int Variable;
     int guess;
     int Answer;
+
     guess = 3;
     Answer = 5; //figure out proper random number generator//
+    
     std::cin >> Variable;
 
     //start loop here//
@@ -34,10 +36,10 @@ int main()
         }
         else if (Variable > Answer)
         {
-        std::cout<<"Your guess is more than the number"<<std::endl;
-        guess = guess - 1;
+            std::cout<<"Your guess is more than the number"<<std::endl;
+            guess = guess - 1;
 
-        std::cout<<"You have "<< guess << " guesses left" <<std::endl;
+            std::cout<<"You have "<< guess << " guesses left" <<std::endl;
         }
 
         //end loop here//
