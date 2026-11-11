@@ -1,4 +1,6 @@
 #include <iostream> 
+#include <cstdlib> 
+#include <ctime>
 
 int Guess;
 int Answer;
@@ -9,6 +11,9 @@ bool Input;
 
 int main()
 {
+    srand(time(0));
+    Answer = rand() % 101;
+
     Display_W = 1;
     Display_L = 1;
     Attempts = 20;
@@ -17,72 +22,89 @@ int main()
 
     std::cin>>Input;
 
+    if (Input == 'Y' || Input == 'y')
+    {
+        Input == true;
+    }
+    if (Input == 'N' || Input == 'n')
+    {
+        Input == false;
+    }
     if (Input == true)
     {
         std::cout<<"Input a number between 0 and 100:"<<std::endl;
         std::cin>>Guess;
+    }
+        while (Input == true)
+        {
+            while (Attempts > 0)
+            {
+                if (Guess == Answer)
+                {
+                    if (Display_W == 1)
+                    {
+                        std::cout<<"You're guess was correct!"<<std::endl;
+                        std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
+                        Attempts = Attempts - 1;
+                    }
+                    if (Display_W == 2)
+                    {
+                        std::cout<<"You got it right!"<<std::endl;
+                        std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
+                        Attempts = Attempts - 1;
+                    }
+                    if (Display_W == 3)
+                    {
+                        std::cout<<"You're guess was correct!"<<std::endl;
+                        std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
+                        Attempts = Attempts - 1;
+                    }
+                    if (Display_W == 4)
+                    {
+                        std::cout<<"You got it right"<<std::endl;
+                        std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
+                        Attempts = Attempts - 1;
+                    }
+                }
+                if (Guess != Answer)
+                {
+                    if (Display_L == 1)
+                    {
+                        std::cout<<"Your guess was incorrect"<<std::endl;
+                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
+                        Attempts = Attempts - 1;
+                    }
+                    if (Display_L == 2)
+                    {
+                        std::cout<<"That was not the right number"<<std::endl;
+                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
+                        Attempts = Attempts - 1;
+                    }
+                    if (Display_L == 3)
+                    {
+                        std::cout<<"Try again"<<std::endl;
+                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
+                        Attempts = Attempts - 1;
+                    }
+                    if (Display_L == 4)
+                    {
+                        std::cout<<"That wasn't quite right"<<std::endl;
+                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
+                        Attempts = Attempts - 1;
+                    }
+                }
+            }
     
+            if (Attempts <= 0)
+            {
+                std::cout<<"You lose, you are out of guesses, would you like to try again? [Y/N]" <<std::endl;
+                std::cin>>Input;
 
-        while (Attempts > 0)
-        {
-            if (Guess == Answer)
-            {
-                if (Display_W == 1)
-                {
-                    std::cout<<"You're guess was correct!"<<std::endl;
-                    std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
-                }
-                if (Display_W == 2)
-                {
-                    std::cout<<"You got it right!"<<std::endl;
-                    std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
-                }
             }
-                if (Display_W == 3)
+            if (Input == false)
                 {
-                    std::cout<<"You're guess was correct!"<<std::endl;
-                    std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
-                }
-                if (Display_W == 4)
-                {
-                    std::cout<<"You got it right"<<std::endl;
-                    std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
+                    std::cout<<"Thanks for playing!"<<std::endl;
                 }
         }
-    }
-        if (Guess != Answer)
-        {
-            if (Display_L == 1)
-            {
-                std::cout<<"Your guess was incorrect"<<std::endl;
-                std::cout<<"You have "<<Attempts<<" left"<<std::endl;
-            }
-            if (Display_L == 2)
-            {
-                std::cout<<"That was not the right number"<<std::endl;
-                std::cout<<"You have "<<Attempts<<" left"<<std::endl;
-            }
-            if (Display_L == 3)
-            {
-                std::cout<<"Try again"<<std::endl;
-                std::cout<<"You have "<<Attempts<<" left"<<std::endl;
-            }
-            if (Display_L == 4)
-            {
-                std::cout<<"That wasn't quite right"<<std::endl;
-                std::cout<<"You have "<<Attempts<<" left"<<std::endl;
-            }
-        }
-    if (Attempts <= 0)
-    {
-        std::cout<<"You lose, you are out of guesses, would you like to try again? [Y/N]" <<std::endl;
-        std::cin>>Input;
-
-        if (Input == false)
-        {
-            std::cout<<"Thanks for playing!"<<std::endl;
-        }
-        
-    }
     return 0;
 }
