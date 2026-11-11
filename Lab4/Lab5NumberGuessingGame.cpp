@@ -46,25 +46,21 @@ int main()
                     {
                         std::cout<<"You're guess was correct!"<<std::endl;
                         std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
-                        Attempts = Attempts - 1;
                     }
                     if (Display_W == 2)
                     {
                         std::cout<<"You got it right!"<<std::endl;
                         std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
-                        Attempts = Attempts - 1;
                     }
                     if (Display_W == 3)
                     {
                         std::cout<<"You're guess was correct!"<<std::endl;
                         std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
-                        Attempts = Attempts - 1;
                     }
                     if (Display_W == 4)
                     {
                         std::cout<<"You got it right"<<std::endl;
                         std::cout<<"You had "<<Attempts<<" attempts left"<<std::endl;
-                        Attempts = Attempts - 1;
                     }
                 }
                 if (Guess != Answer)
@@ -72,27 +68,27 @@ int main()
                     Display_L = (rand() % 4) + 1;
                     if (Display_L == 1)
                     {
-                        std::cout<<"Your guess was incorrect"<<std::endl;
-                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
+                        std::cout<<"Your guess was incorrect"<<std::endl;  
                         Attempts = Attempts - 1;
+                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
                     }
                     if (Display_L == 2)
                     {
                         std::cout<<"That was not the right number"<<std::endl;
-                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
                         Attempts = Attempts - 1;
+                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
                     }
                     if (Display_L == 3)
                     {
                         std::cout<<"Try again"<<std::endl;
-                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
                         Attempts = Attempts - 1;
+                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
                     }
                     if (Display_L == 4)
                     {
                         std::cout<<"That wasn't quite right"<<std::endl;
-                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
                         Attempts = Attempts - 1;
+                        std::cout<<"You have "<<Attempts<<" left"<<std::endl;
                     }
                 }
             }
