@@ -41,6 +41,7 @@ int main()
             {
                 if (Guess == Answer)
                 {
+                    Display_W = (rand() % 4) + 1;
                     if (Display_W == 1)
                     {
                         std::cout<<"You're guess was correct!"<<std::endl;
@@ -68,6 +69,7 @@ int main()
                 }
                 if (Guess != Answer)
                 {
+                    Display_L = (rand() % 4) + 1;
                     if (Display_L == 1)
                     {
                         std::cout<<"Your guess was incorrect"<<std::endl;
